@@ -9,77 +9,84 @@
 </head>
 <body>
 <div class="container1"> 
-	<input class="text" name="Search" value="Enter name">
+	<input class="text" name="Search" value="Введіть назву продукту">
 	<button class="add">
-		Add
+		<span class="addtip" data-tooltip="Додати товар до кошика">Додати</span>
 	</button>
 	<div class="firstLine">
 		Кава
 		<button class="fminus">
-			-
+			<span class="fminustip" data-tooltip="Зменшити кількість товару">-</span>
 		</button>
 		<input class="am1" name="Am1" value="0">
 		<button class="fplus">
-			+
+			<span class="fplustip" data-tooltip="Збільшити кількість товару">+</span>
 		</button>
 		<button class="fbought">
-			Куплено
+			<span class="fboughttip" data-tooltip="Позначити товар купленим">Куплено</span>
 		</button>
 		<button class="fremove">
-			X
+			<span class="fremovetip" data-tooltip="Видалити товар з кошика">Х</span>
 		</button>
 	</div>
 	<div class="secondLine">
 		Печиво
 		<button class="sminus">
-			-
+			<span class="sminustip" data-tooltip="Зменшити кількість товару">-</span>
 		</button>
 		<input class="am2" name="Am1" value="0">
 		<button class="splus">
-			+
+			<span class="splustip" data-tooltip="Збільшити кількість товару">+</span>
 		</button>
 		<button class="sbought">
-			Куплено
+			<span class="sboughttip" data-tooltip="Позначити товар купленим">Куплено</span>
 		</button>
 		<button class="sremove">
-			X
+			<span class="sremovetip" data-tooltip="Видалити товар з кошика">Х</span>
 		</button>
 	</div>
 	<div class="thirdLine">
 		Цукор
 		<button class="tminus">
-			-
+			<span class="tminustip" data-tooltip="Зменшити кількість товару">-</span>
 		</button>
 		<input class="am3" name="Am1" value="0">
 		<button class="tplus">
-			+
+			<span class="tplustip" data-tooltip="Збільшити кількість товару">+</span>
 		</button>
 		<button class="tbought">
-			Куплено
+			<span class="tboughttip" data-tooltip="Позначити товар купленим">Куплено</span>
 		</button>
 		<button class="tremove">
-			X
+			<span class="tremovetip" data-tooltip="Видалити товар з кошика">Х</span>
 		</button>
 	</div>
 </div>
 <div class="container2">
 	<div class="lefft">
-		Залишилося 
+		<p>Залишилося</p> 
 	</div>
 	<div class="whatLeft">
-		<textarea class="prod1">
+		<p class="prod1">
 			Кава
-		</textarea>
-		<textarea class="prod2">
+		</p>
+		<p class="prod2">
 			Печиво
-		</textarea>
-		<textarea class="prod3">
+		</p>
+		<p class="prod3">
 			Цукор
-		</textarea>
+		</p>
 	</div>
 	<div class="alreadyB">
 		Куплено
 	</div>
+</div>
+<div class="bage">
+	Buy List
+	<p id="creator">
+		Created by:
+		Fedorenko Andrew
+	</p>
 </div>
 </body>
 </html>

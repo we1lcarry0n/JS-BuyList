@@ -1,201 +1,467 @@
+
 .container1 {
-max-width: 800px;
-margin: 140px;
+width: 60%;
+margin-left: 100px;
+margin-top: 120px;
 height: 240px;
-border: 3px solid black;
+border-style: outset;
 border-radius: 5px;
+background-color: white;
 }
 
 .text {
 	margin-top: 20px;
-	margin-left: 50px;
-	border: 1px solid;
+	margin-left: 20px;
+	border: inset;
 	border-radius: 5px;
-	border-color: green;
-	width: 560px;
-	height: 30px;
+	border-color: #AFF0B4;
+	width: 80%;
+	height: 40px;
+	text-align: left;
+	font-size: 25px;
+	font-family: "Lucida Console";
+	font-style: oblique;	
 }
 
 .add {
+	border: none;
 	border-color: green;
 	border-radius: 5px;
 	background-color: #4CAF50;
-	color: white;
-	width: 50px;
-	height: 30px;
+	text-align: center;
+	width: 75px;
+	height: 40px;
+	font-size: 20px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
-.container2 {
-	max-width: 200px;
-	margin-left: 0px;
-	border: 1px solid black;
-	height: 240px;
+.addtip{
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.addtip::after, .fboughttip::after, .sboughttip::after, .tboughttip::after, .fremovetip::after, .sremovetip::after, .tremovetip::after, .fminustip::after, .sminustip::after, .tminustip::after, .fplustip::after, .splustip::after, .tplustip::after{
+	font-size: 12px;
+	background: #A113B0;
+	border-radius: 5px;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	color: #FFF;
+	content: attr(data-tooltip); 
+	margin-top: -30px;
+	opacity: 0;
+	padding: 3px 7px;
+	position: absolute;
+	visibility: hidden;
+	transition: all 0.4s ease-in-out;
+	z-index:2;
+}
+
+.addtip::after {
+	margin-top: -55px;
+}
+
+.addtip:hover::after, .fboughttip:hover::after, .sboughttip:hover::after, .tboughttip:hover::after, .fremovetip:hover::after, .sremovetip:hover::after, .tremovetip:hover::after, .fminustip:hover::after, .sminustip:hover::after, .tminustip:hover::after, .fplustip:hover::after, .splustip:hover::after, .tplustip:hover::after{
+	opacity: 1;
+	visibility: visible;
 }
 
 .firstLine {
 	margin-top: 10px;
 	margin-left: 7px;
+	font-size: 30px;
 }
 
 .fminus {
-	background-color: red;
-	border: 1px solid black;
-	border-radius: 75%;
-	margin-left: 269px;
+	height: 30px;
+	width: 30px;
+	background-color: #FB5C5C;
+	border: none;
+	border-radius: 100%;
+	margin-left: 29.9%;
 	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .am1 {
 	background-color:#E3DBDB;
 	width: 20px;
-	height: 20px;
+	height: 30px;
 	border-radius: 3px;
 	border: none;
-	margin-left: 10px;
 	text-align: center;
+	font-family: "Courier New";
+	font-size:20px;
+	font-weight: bold;
 }
 
 .fplus {
-	background-color: green;
-	border: 1px solid black;
-	border-radius: 75%;
-	margin-left: 10px;
+	height: 30px;
+	width: 30px;
+	background-color: #51EC5B;
+	border: none;
+	border-radius: 100%;
 	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .fbought {
 	background-color: #E3DBDB;
-	margin-left: 280px;
+	margin-left: 30%;
 	border-radius: 5px;
+	height:30px;
+	font-size:15px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: black;
 }
 
 .fremove {
-	margin-left: 15px;
-	border: 2px solid black;
+	border: none;
 	background-color: #EF1D1D;
 	border-radius: 5px;
 	color: white;
+	width: 30px;
+	height: 30px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .secondLine {
 	margin-top: 15px;
 	margin-left: 7px;
+	font-size: 30px;
 }
 
 .sminus {
-	background-color: red;
-	border: 1px solid black;
-	border-radius: 75%;
-	margin-left: 250px;
+	height: 30px;
+	width: 30px;
+	background-color: #FB5C5C;
+	border: none;
+	border-radius: 100%;
+	margin-left: 25.7%;
 	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .am2 {
 	background-color:#E3DBDB;
 	width: 20px;
-	height: 20px;
+	height: 30px;
 	border-radius: 3px;
 	border: none;
-	margin-left: 10px;
 	text-align: center;
+	font-family: "Courier New";
+	font-size:20px;
+	font-weight: bold;
 }
 
 .splus {
-	background-color: green;
-	border: 1px solid black;
-	border-radius: 75%;
-	margin-left: 10px;
+	height: 30px;
+	width: 30px;
+	background-color: #51EC5B;
+	border: none;
+	border-radius: 100%;
 	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .sbought {
 	background-color: #E3DBDB;
-	margin-left: 280px;
+	margin-left: 30%;
 	border-radius: 5px;
+	height:30px;
+	font-size:15px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: black;
 }
 
 .sremove {
-	margin-left: 15px;
-	border: 2px solid black;
+	border: none;
 	background-color: #EF1D1D;
 	border-radius: 5px;
 	color: white;
+	width: 30px;
+	height: 30px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .thirdLine {
 	margin-top: 15px;
 	margin-left: 7px;
+	font-size: 30px;
 }
 
 .tminus {
-	background-color: red;
-	border: 1px solid black;
-	border-radius: 75%;
-	margin-left: 258px;
+	height: 30px;
+	width: 30px;
+	background-color: #FB5C5C;
+	border: none;
+	border-radius: 100%;
+	margin-left: 27.4%;
 	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .am3 {
 	background-color:#E3DBDB;
 	width: 20px;
-	height: 20px;
+	height: 30px;
 	border-radius: 3px;
 	border: none;
-	margin-left: 10px;
 	text-align: center;
+	font-family: "Courier New";
+	font-size:20px;
+	font-weight: bold;
 }
 
 .tplus {
-	background-color: green;
-	border: 1px solid black;
-	border-radius: 75%;
-	margin-left: 10px;
+	height: 30px;
+	width: 30px;
+	background-color: #51EC5B;
+	border: none;
+	border-radius: 100%;
 	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .tbought {
 	background-color: #E3DBDB;
-	margin-left: 280px;
+	margin-left: 30%;
 	border-radius: 5px;
+	height:30px;
+	font-size:15px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: black;
 }
 
 .tremove {
-	margin-left: 15px;
-	border: 2px solid black;
+	border: none;
 	background-color: #EF1D1D;
 	border-radius: 5px;
 	color: white;
+	width: 30px;
+	height: 30px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: #FFF;
 }
 
 .container2 {
-	margin-left: 1100px;
-	border: 3px solid grey;
+	border-style: outset;
 	border-radius: 3px;
-	width: 600px;
+	width: 25%;
+	height: 240px;
+	position: absolute;
+	right: 50px;
+	top:120px;
+	background-color: white;
 }
 
 .lefft {
-	margin-left: 59px;
+	margin-left: 35%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.whatLeft {
+	position: relative;
 }
 
 .prod1 {
-	width: 150px;
-	height: 30px;
-	text-align: top;
+	position: absolute;
+	left: 5%;
+	top: 10%;
+	border: none;
+	background-color: #E1E2E1;
+	border-radius: 5px;
+	width: 50px;
+	height: 25px;
+	text-align: center;
+	padding-top: 5px;
 }
 
 .prod2 {
-	width: 150px;
-	height: 30px;
-	text-align: top;
+	position: absolute;
+	top: 10%;
+	left: 24%;
+	border: none;
+	background-color: #E1E2E1;
+	border-radius: 5px;
+	width: 60px;
+	height: 25px;
+	text-align: center;
+	padding-top: 5px;
 }
 
 .prod3 {
-	width: 150px;
-	height: 30px;
-	text-align: top;
+	position: absolute;
+	top: 10%;
+	left: 41%;
+	margin-left: 5%;
+	border: none;
+	background-color: #E1E2E1;
+	border-radius: 5px;
+	width: 55px;
+	height: 25px;
+	text-align: center;
+	padding-top: 5px;
 }
 
 .alreadyB {
-	margin-left: 69px;
+	margin-top: 80px;
+	margin-left: 40%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.bage {
+	position: absolute;
+	right:10%;
+	bottom:0px;
+	width:150px;
+	height:50px;
+	background: purple;
+	border: free;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	margin-left: 1050px;
+	transition: 1s ease;
+	color:white;
+	text-align:center;
+	font-family: "Lucida Console";
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 15px;
+}
+
+#creator {
+	display: none;
+	margin-top: 30px;
+	transition: 1s ease;
+	color: white;
+	font-size: 15px;
+}
+
+.bage:hover {
+	background: #5A3BD4;
+	height: 100px;
+}
+
+.bage:hover #creator {
+	display: block;
+}
+
+@media (max-width: 1200px) {
+	.text{
+		width: 55%;
+	}
+	
+	.fminus, .sminus, .tminus, .fbought, .sbought, .tbought{
+		margin-left: 10%;
+	}
+	
+	.container1 {
+		width: 50%;
+	}
+	
+	.container2 {
+		width: 30%;
+	}
+}
+
+@media (max-width: 800px) {
+	.fminus, .sminus, .tminus, .fbought, .sbought, .tbought{
+		margin-left: 5%;
+		height: 25px;
+		font-size:10px;
+	}
+	.fminus, .sminus, .tminus, .fplus, .splus, .tplus, .fremove, .sremove, .tremove{
+		height: 25px;
+		width: 25px;
+		font-size: 10px;
+	}
+	.firstLine, .secondLine, .thirdLine{
+		font-size: 20px;
+	}
+	.text{
+		width: 65%;
+	}
+	.container2 {
+		position: relative;
+		margin-left: 140px;
+		width: 50%;
+	}
+	
+	.bage {
+		right: 5%;
+	}
+}
+
+@media (max-width: 500px) {
+	.fminus, .sminus, .tminus, .fbought, .sbought, .tbought{
+		margin-left: 1%;
+		height: 20px;
+		font-size:10px;
+	}
+	.fminus, .sminus, .tminus, .fplus, .splus, .tplus, .fremove, .sremove, .tremove{
+		height: 20px;
+		width: 20px;
+		font-size: 10px;
+	}
+	.text{
+		width: 55%;
+	}
+}
+
+@media print {
+	.bage {
+		background: white;
+		border: 1px solid black;
+		color: black;
+		font-size: 0px;
+	}
+	
+	#creator {
+		position: absolute;
+		top: 5px;
+		display: block;
+	}
 }
