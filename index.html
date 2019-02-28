@@ -3,63 +3,69 @@
 <head lang="uk">
     <meta charset="UTF-8">
     <title>My Page</title>
-
-
     <link rel="stylesheet" type="text/css" href="main.css" />
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="anime.js"></script>
 </head>
 <body>
 <div class="container1"> 
-	<input class="text" name="Search" value="Введіть назву продукту">
-	<button class="add">
+	<input id="input-field" class="text" name="Search" value="Введіть назву продукту">
+	<button id="add-button" class="add">
 		<span class="addtip" data-tooltip="Додати товар до кошика">Додати</span>
 	</button>
-	<div class="firstLine">
-		Кава
-		<button class="fminus">
-			<span class="fminustip" data-tooltip="Зменшити кількість товару">-</span>
+	<div id="preset1" class="firstLine">
+		<span class="inside">Кава</span>
+		<input class = "toChange" value="change">
+		<button class="minus">
+			<span class="minustip" data-tooltip="Зменшити кількість товару">-</span>
 		</button>
-		<input class="am1" name="Am1" value="0">
-		<button class="fplus">
-			<span class="fplustip" data-tooltip="Збільшити кількість товару">+</span>
+		<input class="am" name="Am1" value="1">
+		<button class="plus">
+			<span class="plustip" data-tooltip="Збільшити кількість товару">+</span>
 		</button>
-		<button class="fbought">
-			<span class="fboughttip" data-tooltip="Позначити товар купленим">Куплено</span>
+		<button class="bought">
+			<span class="boughttip" data-tooltip="Позначити товар купленим">Куплено</span>
 		</button>
-		<button class="fremove">
-			<span class="fremovetip" data-tooltip="Видалити товар з кошика">Х</span>
+		<button class="remove">
+			<span class="removetip" data-tooltip="Видалити товар з кошика">Х</span>
 		</button>
+		<button class="notBought">Не куплено</button>
 	</div>
-	<div class="secondLine">
-		Печиво
-		<button class="sminus">
-			<span class="sminustip" data-tooltip="Зменшити кількість товару">-</span>
+	<div id="preset2" class="secondLine">
+		<span class="inside">Печиво</span>
+		<input class = "toChange" value="change">
+		<button class="minus">
+			<span class="minustip" data-tooltip="Зменшити кількість товару">-</span>
 		</button>
-		<input class="am2" name="Am1" value="0">
-		<button class="splus">
-			<span class="splustip" data-tooltip="Збільшити кількість товару">+</span>
+		<input class="am" name="Am1" value="1">
+		<button class="plus">
+			<span class="plustip" data-tooltip="Збільшити кількість товару">+</span>
 		</button>
-		<button class="sbought">
-			<span class="sboughttip" data-tooltip="Позначити товар купленим">Куплено</span>
+		<button class="bought">
+			<span class="boughttip" data-tooltip="Позначити товар купленим">Куплено</span>
 		</button>
-		<button class="sremove">
-			<span class="sremovetip" data-tooltip="Видалити товар з кошика">Х</span>
+		<button class="remove">
+			<span class="removetip" data-tooltip="Видалити товар з кошика">Х</span>
 		</button>
+		<button class="notBought">Не куплено</button>
 	</div>
-	<div class="thirdLine">
-		Цукор
-		<button class="tminus">
-			<span class="tminustip" data-tooltip="Зменшити кількість товару">-</span>
+	<div id="toBeCloned" class = "thirdLine">
+		<span class="inside">Цукор</span>
+		<input class = "toChange" value="change">
+		<button class="minus">
+			<span class="minustip" data-tooltip="Зменшити кількість товару">-</span>
 		</button>
-		<input class="am3" name="Am1" value="0">
-		<button class="tplus">
-			<span class="tplustip" data-tooltip="Збільшити кількість товару">+</span>
+		<input class="am" name="Am1" value="1">
+		<button class="plus">
+			<span class="plustip" data-tooltip="Збільшити кількість товару">+</span>
 		</button>
-		<button class="tbought">
-			<span class="tboughttip" data-tooltip="Позначити товар купленим">Куплено</span>
+		<button class="bought">
+			<span class="boughttip" data-tooltip="Позначити товар купленим">Куплено</span>
 		</button>
-		<button class="tremove">
-			<span class="tremovetip" data-tooltip="Видалити товар з кошика">Х</span>
+		<button class="remove">
+			<span class="removetip" data-tooltip="Видалити товар з кошика">Х</span>
 		</button>
+		<button class="notBought">Не куплено</button>
 	</div>
 </div>
 <div class="container2">
@@ -67,18 +73,23 @@
 		<p>Залишилося</p> 
 	</div>
 	<div class="whatLeft">
-		<p class="prod1">
-			Кава
-		</p>
-		<p class="prod2">
-			Печиво
-		</p>
-		<p class="prod3">
-			Цукор
-		</p>
+		<span id="preset1" class="prod">
+			<span class = "prodR">Кава</span>
+			<span class = "amR">1</span>
+		</span>
+		<span id = "preset2" class="prod">
+			<span class = "prodR">Печиво</span>
+			<span class = "amR">1</span>
+		</span>
+		<span id="toBeClonedd" class="prod">
+			<span class = "prodR">Цукор</span>
+			<span class = "amR">1</span>
+		</span>
 	</div>
 	<div class="alreadyB">
 		Куплено
+	</div>
+	<div class="whatBought">
 	</div>
 </div>
 <div class="bage">

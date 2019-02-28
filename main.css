@@ -3,7 +3,7 @@
 width: 60%;
 margin-left: 100px;
 margin-top: 120px;
-height: 240px;
+height: 100%;
 border-style: outset;
 border-radius: 5px;
 background-color: white;
@@ -43,7 +43,7 @@ background-color: white;
     border-radius: 6px;
 }
 
-.addtip::after, .fboughttip::after, .sboughttip::after, .tboughttip::after, .fremovetip::after, .sremovetip::after, .tremovetip::after, .fminustip::after, .sminustip::after, .tminustip::after, .fplustip::after, .splustip::after, .tplustip::after{
+.addtip::after, .boughttip::after, .removetip::after, .minustip::after, .plustip::after {
 	font-size: 12px;
 	background: #A113B0;
 	border-radius: 5px;
@@ -63,24 +63,36 @@ background-color: white;
 	margin-top: -55px;
 }
 
-.addtip:hover::after, .fboughttip:hover::after, .sboughttip:hover::after, .tboughttip:hover::after, .fremovetip:hover::after, .sremovetip:hover::after, .tremovetip:hover::after, .fminustip:hover::after, .sminustip:hover::after, .tminustip:hover::after, .fplustip:hover::after, .splustip:hover::after, .tplustip:hover::after{
+.addtip:hover::after, .boughttip:hover::after, .removetip:hover::after, .minustip:hover::after, .plustip:hover::after {
 	opacity: 1;
 	visibility: visible;
 }
 
-.firstLine {
+.firstLine, .secondLine, .thirdLine{
+	position: relative;
 	margin-top: 10px;
 	margin-left: 7px;
 	font-size: 30px;
 }
 
-.fminus {
+#toBeCloned {
+	visibility: hidden;
+	position: absolute;
+}
+
+#toBeClonedd {
+	position: absolute;
+	visibility: hidden;
+}
+
+.minus {
+	position: absolute;
+	left: 30%;
 	height: 30px;
 	width: 30px;
 	background-color: #FB5C5C;
 	border: none;
 	border-radius: 100%;
-	margin-left: 29.9%;
 	text-align: center;
 	color: white;
 	font-size: 20px;
@@ -90,7 +102,9 @@ background-color: white;
   color: #FFF;
 }
 
-.am1 {
+.am {
+	position: absolute;
+	left: 34%;
 	background-color:#E3DBDB;
 	width: 20px;
 	height: 30px;
@@ -102,7 +116,9 @@ background-color: white;
 	font-weight: bold;
 }
 
-.fplus {
+.plus {
+	position: absolute;
+	left: 36.9%;
 	height: 30px;
 	width: 30px;
 	background-color: #51EC5B;
@@ -117,9 +133,10 @@ background-color: white;
   color: #FFF;
 }
 
-.fbought {
+.bought{
+	position: absolute;
+	left: 83%;
 	background-color: #E3DBDB;
-	margin-left: 30%;
 	border-radius: 5px;
 	height:30px;
 	font-size:15px;
@@ -128,7 +145,22 @@ background-color: white;
   color: black;
 }
 
-.fremove {
+.notBought{
+	position: absolute;
+	left: 87%;
+	background-color: #E3DBDB;
+	border-radius: 5px;
+	height:30px;
+	font-size:15px;
+	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
+  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+  color: black;
+  visibility: hidden;
+}
+
+.remove {
+	position: absolute;
+	left: 93%;
 	border: none;
 	background-color: #EF1D1D;
 	border-radius: 5px;
@@ -140,150 +172,20 @@ background-color: white;
   color: #FFF;
 }
 
-.secondLine {
-	margin-top: 15px;
-	margin-left: 7px;
-	font-size: 30px;
-}
-
-.sminus {
-	height: 30px;
-	width: 30px;
-	background-color: #FB5C5C;
-	border: none;
-	border-radius: 100%;
-	margin-left: 25.7%;
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: #FFF;
-}
-
-.am2 {
-	background-color:#E3DBDB;
-	width: 20px;
-	height: 30px;
-	border-radius: 3px;
-	border: none;
-	text-align: center;
-	font-family: "Courier New";
-	font-size:20px;
-	font-weight: bold;
-}
-
-.splus {
-	height: 30px;
-	width: 30px;
-	background-color: #51EC5B;
-	border: none;
-	border-radius: 100%;
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: #FFF;
-}
-
-.sbought {
-	background-color: #E3DBDB;
-	margin-left: 30%;
+.toChange {
+	position: absolute;
+	left: 0.1%;
+	border: inset;
 	border-radius: 5px;
-	height:30px;
-	font-size:15px;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: black;
-}
-
-.sremove {
-	border: none;
-	background-color: #EF1D1D;
-	border-radius: 5px;
-	color: white;
-	width: 30px;
-	height: 30px;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: #FFF;
-}
-
-.thirdLine {
-	margin-top: 15px;
-	margin-left: 7px;
-	font-size: 30px;
-}
-
-.tminus {
-	height: 30px;
-	width: 30px;
-	background-color: #FB5C5C;
-	border: none;
-	border-radius: 100%;
-	margin-left: 27.4%;
-	text-align: center;
-	color: white;
+	border-color: #1F2AB9;
+	height: 25px;
+	width: 12%;
+	text-align: left;
 	font-size: 20px;
-	font-weight: bold;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: #FFF;
+	font-family: "Lucida Console";
+	font-style: oblique;	
+	visibility: hidden;
 }
-
-.am3 {
-	background-color:#E3DBDB;
-	width: 20px;
-	height: 30px;
-	border-radius: 3px;
-	border: none;
-	text-align: center;
-	font-family: "Courier New";
-	font-size:20px;
-	font-weight: bold;
-}
-
-.tplus {
-	height: 30px;
-	width: 30px;
-	background-color: #51EC5B;
-	border: none;
-	border-radius: 100%;
-	text-align: center;
-	color: white;
-	font-size: 20px;
-	font-weight: bold;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: #FFF;
-}
-
-.tbought {
-	background-color: #E3DBDB;
-	margin-left: 30%;
-	border-radius: 5px;
-	height:30px;
-	font-size:15px;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: black;
-}
-
-.tremove {
-	border: none;
-	background-color: #EF1D1D;
-	border-radius: 5px;
-	color: white;
-	width: 30px;
-	height: 30px;
-	box-shadow: 0 0 0 1px rgba(34,36,38,.15)
-  inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
-  color: #FFF;
-}
-
 .container2 {
 	border-style: outset;
 	border-radius: 3px;
@@ -305,44 +207,24 @@ background-color: white;
 	position: relative;
 }
 
-.prod1 {
-	position: absolute;
-	left: 5%;
-	top: 10%;
+.prod {
+	margin-left: 10px;
+	padding: 3px;
 	border: none;
 	background-color: #E1E2E1;
 	border-radius: 5px;
-	width: 50px;
-	height: 25px;
-	text-align: center;
-	padding-top: 5px;
+	height: 30px;
+	font-size: 20px;
 }
 
-.prod2 {
-	position: absolute;
-	top: 10%;
-	left: 24%;
+.amR {
+	height: 20px;
+	width: 20px;
+	font-size: 18px;
+	border-radius: 100%;
+	color: #FFF;
 	border: none;
-	background-color: #E1E2E1;
-	border-radius: 5px;
-	width: 60px;
-	height: 25px;
-	text-align: center;
-	padding-top: 5px;
-}
-
-.prod3 {
-	position: absolute;
-	top: 10%;
-	left: 41%;
-	margin-left: 5%;
-	border: none;
-	background-color: #E1E2E1;
-	border-radius: 5px;
-	width: 55px;
-	height: 25px;
-	text-align: center;
-	padding-top: 5px;
+	background-color: #FEAD0B;
 }
 
 .alreadyB {
@@ -394,8 +276,23 @@ background-color: white;
 		width: 55%;
 	}
 	
-	.fminus, .sminus, .tminus, .fbought, .sbought, .tbought{
-		margin-left: 10%;
+	.fminus, .sminus, .tminus {
+		left: 24.5%;
+	}
+	
+	.am1, .am2, .am3 {
+		left: 30.4%;
+	}
+	
+	.fplus, .splus, .tplus {
+		left: 34.6%;
+	}
+	
+	.fbought, .sbought, .tbought {
+		left: 79%;
+	}
+	
+	.fremove, .sremove, .tremove {
 	}
 	
 	.container1 {
@@ -408,16 +305,41 @@ background-color: white;
 }
 
 @media (max-width: 800px) {
-	.fminus, .sminus, .tminus, .fbought, .sbought, .tbought{
-		margin-left: 5%;
-		height: 25px;
-		font-size:10px;
+	
+	.fminus, .sminus, .tminus {
+		left: 24.5%;
 	}
+	
+	.am1, .am2, .am3 {
+		left: 33%;
+	}
+	
+	.fplus, .splus, .tplus {
+		left: 42%;
+	}
+	
+	.fbought, .sbought, .tbought {
+		left: 68%;
+	}
+	
+	.fremove, .sremove, .tremove {
+		left: 90%;
+	}
+
 	.fminus, .sminus, .tminus, .fplus, .splus, .tplus, .fremove, .sremove, .tremove{
 		height: 25px;
 		width: 25px;
 		font-size: 10px;
 	}
+	 
+	 .am1, .am2, .am3  {
+		height: 25px;
+		width: 25px;
+	 }
+	 
+	 .fbought, .sbought, .tbought{
+		 height: 25px;
+	 }
 	.firstLine, .secondLine, .thirdLine{
 		font-size: 20px;
 	}
@@ -436,18 +358,42 @@ background-color: white;
 }
 
 @media (max-width: 500px) {
-	.fminus, .sminus, .tminus, .fbought, .sbought, .tbought{
-		margin-left: 1%;
+	
+	.minus {
+		left: 30%;
+	}
+	
+	.am {
+		left: 42%;
+	}
+	
+	.plus {
+		left: 52%;
+	}
+	
+	.fbought, .sbought, .tbought {
+		left: 62%;
+	}
+	
+	.fremove, .sremove, .tremove {
+		left: 90%;
+	}
+	
+	.am {
+		height: 20px;
+		width: 20px;
+	 }
+	.minus, .fbought, .sbought, .tbought{
 		height: 20px;
 		font-size:10px;
 	}
-	.fminus, .sminus, .tminus, .fplus, .splus, .tplus, .fremove, .sremove, .tremove{
+	.minus, .plus, .fremove, .sremove, .tremove{
 		height: 20px;
 		width: 20px;
 		font-size: 10px;
 	}
 	.text{
-		width: 55%;
+		width: 50%;
 	}
 }
 
